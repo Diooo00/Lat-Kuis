@@ -30,7 +30,59 @@
             </button>
         </div>
     </div>
-    
+
+   <div class="card-wrapper container-md" id="card-wrapper">
+    <div class="container-md ke-2">
+        <div class="card text-bg-dark mt-3" style="max-width: 18rem;">
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit asperiores ullam, nisi soluta ab ipsam delectus ducimus autem aperiam perferendis laborum praesentium, est laudantium. Cum repellat veritatis maxime eum.</p>
+                <div class="stars">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+                <img src="thumb-512-minion-6038.webp" alt="" class="rounded-circle" width="50px" height="50px">
+                <h5 class="card-title">Mbahoon</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Photographer</h6>
+            </div>
+        </div>
+    </div>
+    <div class="container-md ke-2">
+        <div class="card text-bg-dark mt-3" style="max-width: 18rem;">
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit asperiores ullam, nisi soluta ab ipsam delectus ducimus autem aperiam perferendis laborum praesentium, est laudantium. Cum repellat veritatis maxime eum.</p>
+                <div class="stars">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+                <img src="thumb-512-minion-6038.webp" alt="" class="rounded-circle" width="50px" height="50px">
+                <h5 class="card-title">Mbahoon</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Photographer</h6>
+            </div>
+        </div>
+    </div>
+    <div class="container-md ke-2">
+        <div class="card text-bg-dark mt-3" style="max-width: 18rem;">
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit asperiores ullam, nisi soluta ab ipsam delectus ducimus autem aperiam perferendis laborum praesentium, est laudantium. Cum repellat veritatis maxime eum.</p>
+                <div class="stars">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+                <img src="thumb-512-minion-6038.webp" alt="" class="rounded-circle" width="50px" height="50px">
+                <h5 class="card-title">Mbahoon</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Photographer</h6>
+            </div>
+        </div>
+    </div>
     <div class="container-md ke-2">
         <div class="card text-bg-dark mt-3" style="max-width: 18rem;">
             <div class="card-body">
@@ -202,6 +254,33 @@
         </div>
     </div>
         
+   </div> 
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script>
+        const wrapper = document.getElementById("card-wrapper");
+        const cards = document.querySelectorAll(".card");
+        const next = document.getElementById("next");
+        const prev = document.getElementById("prev");
+
+        let index = 0;
+
+        function geserrrrr() {
+        const cardWidth = cards[0].offsetWidth + 20;
+        wrapper.style.transform = `translateX(-${index * cardWidth}px)`;
+        }
+
+        next.onclick = () => {
+            if (index < cards.length - 1) index++;
+            geserrrrr();
+        };
+
+        prev.onclick = () => {
+            if (index > 0) index--;
+            geserrrrr();
+        };
+    </script>
   </body>
 </html>
